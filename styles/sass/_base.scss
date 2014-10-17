@@ -7,26 +7,50 @@ body {
 	background-color: #000;
 	background-image: url('../../img/bg.jpg');
 	background-size: cover;
-	background-position: top center;
+	background-attachment: fixed;
+	background-position: center center;
+
+
+
 
 	color: white;
 	transition: .5s;
 
 	font-family: $ff-cond;
 
-	&:before {
-		z-index: -5;
-		content:'';
-		display: block;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(black, .5);
-	}
+	// &:before {
+	// 	z-index: -5;
+	// 	content:'';
+	// 	display: block;
+	// 	position: fixed;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	background-color: rgba(black, .5);
+	// }
+	//
+	//
 }
-
+body:before, body:after {
+    content: "";
+    position: fixed;
+    background: $color-brand;
+    left: 0;
+    right: 0;
+    height: 10px;
+    z-index: 9999;
+}
+body:before {
+    top: 0;
+}
+body:after {
+    bottom: 0;
+}
+body {
+    border-left: 10px solid $color-brand;
+    border-right: 10px solid $color-brand;
+}
 .section p {
 	font-weight: $fw-light;
 	font-size: rem-calc(20px);
@@ -38,7 +62,7 @@ body {
 	left: 0;
 	position: fixed;
 	top: 0;
-	height: 150px;
+	height: 100px;
 	z-index: 5;
 	&:hover {
 		.social-btns {
@@ -120,6 +144,8 @@ body {
 	margin-bottom: 30px;
 	margin-top: -40px;
 	margin-left: 25px;
+	z-index: 0;
+	position: relative;
 }
 
 .section {
@@ -139,6 +165,10 @@ body {
 	top: 150px;
 	// left: 50%;
 	// transform: translateX(-50%);
+	//
+	p {
+		margin-bottom: .8em;
+	}
 }
 
 .read-more-btn {
@@ -322,6 +352,7 @@ h2 {
 	font-weight: $fw-light;
 	font-size: rem-calc(16);
 	line-height: 1.2;
+	text-transform: uppercase;
 
 	span {
 		display: block;
@@ -352,6 +383,7 @@ h2 {
 	&:first-child {
 		padding-right: 70px;
 		border-right: 2px solid $color-brand;
+
 	}
 	&:last-child {
 		padding-left: 70px;
@@ -413,17 +445,19 @@ h2 {
 }
 	.comp-title {
 		font-weight: $fw-light;
-		font-size: rem-calc(80);
+		font-size: rem-calc(100);
 		text-transform: uppercase;
 		line-height: 1;
 		text-align: left;
 		font-weight: $fw-regular;
 		margin-bottom: 50px;
 		text-align: center;
+		color: $color-brand;
+		text-shadow: 0 0 100px $color-brand;
 		// font-weight: $fw-bold;
 
 		span {
-			color: $color-brand;
+			color: #fff;
 			display: block;
 			font-size: rem-calc(30);
 		}
@@ -506,6 +540,7 @@ h2 {
 		padding: 20px 30px;
 
 		p {
+			font-size: rem-calc(20px);
 			line-height: 2;
 		}
 
@@ -577,4 +612,20 @@ h2 {
 
 	.slide {
 
+	}
+
+
+	.contact {
+		text-align: center;
+		font-family: $ff-cond;
+		font-weight: $fw-light;
+		font-size: rem-calc(50px);
+		color: $color-brand;
+		text-transform: uppercase;
+		display: block;
+		margin-top: 200px;
+
+		&:hover {
+			color: #d93399;
+		}
 	}

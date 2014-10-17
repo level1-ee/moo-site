@@ -38,7 +38,7 @@ $('.grid-item > a').magnificPopup({
   type:'inline',
   midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     // Delay in milliseconds before popup is removed
-  removalDelay: 30,
+  removalDelay: 50,
 
   // Class that is added to popup wrapper and background
   // make it unique to apply your CSS animations just to this exact popup
@@ -53,7 +53,7 @@ $('.grid-item > a').magnificPopup({
     },
     close: function() {
       // Will fire when popup is closed
-      top.document.location.hash = '';
+      top.document.location.hash = '/';
     },
     change: function() {
       top.document.location.hash = magnificPopup.index;

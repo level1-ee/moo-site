@@ -30,18 +30,18 @@
 // 1. Default Settings
 ////////////////////////
 
-$mfp-overlay-color:                   #0b0b0b !default;
-$mfp-overlay-opacity:                 0.8 !default;
+$mfp-overlay-color:                   linear-gradient(to bottom, rgba(#000,0.95), rgba(#FF00DE,0.95)) !default;
+$mfp-overlay-opacity:                 .95 !default;
 $mfp-shadow:                          0 0 8px rgba(0, 0, 0, 0.6) !default; // shadow on image or iframe
 $mfp-popup-padding-left:              8px !default; // Padding from left and from right side
 $mfp-popup-padding-left-mobile:       6px !default; // Same as above, but is applied when width of window is less than 800px
 
 $mfp-z-index-base:                    1040 !default; // Base z-index of popup
 $mfp-include-arrows:                  true !default; // include styles for nav arrows
-$mfp-controls-opacity:                0.65 !default;
-$mfp-controls-color:                  #FFF !default;
+$mfp-controls-opacity:                .8 !default;
+$mfp-controls-color:                  $color-brand  !default;
 $mfp-controls-border-color:           #3F3F3F !default;
-$mfp-inner-close-icon-color:          #333 !default;
+$mfp-inner-close-icon-color:          $color-brand !default;
 $mfp-controls-text-color:             #CCC !default; // Color of preloader and "1 of X" indicator
 $mfp-controls-text-color-hover:       #FFF !default;
 $mfp-IE7support:                      true !default; // Very basic IE7 support
@@ -82,6 +82,8 @@ $mfp-use-visuallyhidden:              false !default; // Hide content from brows
   z-index: $mfp-z-index-base + 2;
   overflow: hidden;
   position: fixed;
+      border-left: 10px solid $color-brand;
+    border-right: 10px solid $color-brand;
 
   background: $mfp-overlay-color;
   opacity: $mfp-overlay-opacity;
@@ -308,6 +310,10 @@ button {
 .mfp-close-btn-in {
   .mfp-close {
     color: $mfp-inner-close-icon-color;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    font-size: 50px;
   }
 }
 .mfp-image-holder,
@@ -668,6 +674,7 @@ button {
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
 
+
   -webkit-transition: all 0.15s ease-out;
   -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
@@ -679,4 +686,7 @@ button {
 /* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
+    -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
 }
