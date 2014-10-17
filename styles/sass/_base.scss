@@ -276,6 +276,11 @@ h2 {
 		}
 	}
 
+	.grid-item--kungfoot {
+		width: 400px !important;
+		height: 100px !important;
+	}
+
 	.grid-item--kungfoot a {
 		background:
 		linear-gradient(to bottom, rgba($color-brand,0.40), rgba(#FF00DE,0.40)), url('../../img/game-covers/kungfoot.jpg');
@@ -538,6 +543,16 @@ h2 {
 		border-top: 1px solid rgba($color-brand, .4);
 		background-color: rgba(black, .5);
 		padding: 20px 30px;
+
+		a {
+			color: #fff;
+			border-bottom: 2px solid $color-brand;
+
+			&:hover {
+				color: $color-brand;
+				border-bottom: 2px solid $color-brand;
+			}
+		}
 
 		p {
 			font-size: rem-calc(20px);

@@ -1026,6 +1026,9 @@ h2 {
     background: -webkit-linear-gradient(top, rgba(246, 217, 79, 0.4), rgba(255, 0, 222, 0.7)), url("../../img/game-covers/driveclub.jpg");
     background: linear-gradient(to bottom, rgba(246, 217, 79, 0.4), rgba(255, 0, 222, 0.7)), url("../../img/game-covers/driveclub.jpg");
     background-size: cover; }
+.toc-grid .grid-item--kungfoot {
+  width: 400px !important;
+  height: 100px !important; }
 .toc-grid .grid-item--kungfoot a {
   background: -webkit-linear-gradient(top, rgba(246, 217, 79, 0.4), rgba(255, 0, 222, 0.4)), url("../../img/game-covers/kungfoot.jpg");
   background: linear-gradient(to bottom, rgba(246, 217, 79, 0.4), rgba(255, 0, 222, 0.4)), url("../../img/game-covers/kungfoot.jpg");
@@ -1226,6 +1229,12 @@ p.btn-helper {
   border-top: 1px solid rgba(246, 217, 79, 0.4);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px 30px; }
+  .comp-rules a {
+    color: #fff;
+    border-bottom: 2px solid #f6d94f; }
+    .comp-rules a:hover {
+      color: #f6d94f;
+      border-bottom: 2px solid #f6d94f; }
   .comp-rules p {
     font-size: 1.25rem;
     line-height: 2; }
