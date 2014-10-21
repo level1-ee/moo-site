@@ -1,3 +1,17 @@
+@keyframes shake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
 .wrapper {
 	padding: 150px 100px;
 }
@@ -519,6 +533,20 @@ h2 {
 		box-shadow: 0 0 30px rgba($color-brand,.7);
 			// box-shadow: 0 0 100px $color-brand;
 		}
+	}
+
+	.btn--disabled {
+
+		text-decoration: line-through;
+
+		&:hover {
+			cursor: not-allowed;
+		  animation-name: shake;
+	    animation-duration: 1s;
+		  animation-fill-mode: both;
+		  box-shadow: none;
+		}
+
 	}
 
 
