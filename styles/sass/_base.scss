@@ -402,7 +402,6 @@ h2 {
 	&:first-child {
 		padding-right: 70px;
 		border-right: 2px solid $color-brand;
-
 	}
 	&:last-child {
 		padding-left: 70px;
@@ -421,6 +420,7 @@ h2 {
 		border-top: 1px solid rgba($color-brand, .4);
 		background-color: rgba(black, .5);
 		padding: 20px 30px;
+		margin-bottom: 60px;
 	p {
 		font-size: rem-calc(19);
 		line-height: 1.9;
@@ -552,6 +552,11 @@ h2 {
 
 	.btn-wrapper {
 		display: inline-block;
+
+		.section--02 & {
+			width: 100%;
+			text-align: center;
+		}
 	}
 	p.btn-helper {
 		text-align: center;

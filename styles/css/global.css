@@ -1145,7 +1145,8 @@ h2 {
   border-bottom: 1px solid rgba(246, 217, 79, 0.4);
   border-top: 1px solid rgba(246, 217, 79, 0.4);
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px 30px; }
+  padding: 20px 30px;
+  margin-bottom: 60px; }
   .event-info p {
     font-size: 1.1875rem;
     line-height: 1.9;
@@ -1245,6 +1246,9 @@ h2 {
 
 .btn-wrapper {
   display: inline-block; }
+  .section--02 .btn-wrapper {
+    width: 100%;
+    text-align: center; }
 
 p.btn-helper {
   text-align: center;
